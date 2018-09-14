@@ -10,7 +10,11 @@ public interface BlockData {
 
     Material getType();
 
+    int getTypeId();
+
     byte getData();
+
+    int getCombinedId();
 
     World getWorld();
 
