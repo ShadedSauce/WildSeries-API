@@ -1,9 +1,8 @@
 package xyz.wildseries.wildtools.api;
 
-import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import xyz.wildseries.wildtools.api.objects.Block;
+
 import xyz.wildseries.wildtools.api.objects.Selection;
 import xyz.wildseries.wildtools.api.objects.tools.CannonTool;
 import xyz.wildseries.wildtools.api.objects.tools.CraftingTool;
@@ -106,16 +105,6 @@ public class WildToolsAPI {
      */
     public static SellTool getSellTool(ItemStack itemStack){
         return instance.getToolsManager().getSellTool(itemStack);
-    }
-
-    /**
-     * Get a wrapped-block object by a location
-     *
-     * @param location a location to check
-     * @return wrapped-block object
-     */
-    public static Block getWrappedBlock(Location location){
-        return instance.getToolsManager().getBlock(location);
     }
 
     /**

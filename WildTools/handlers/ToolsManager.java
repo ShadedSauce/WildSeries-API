@@ -1,10 +1,9 @@
 package xyz.wildseries.wildtools.api.handlers;
 
-import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import xyz.wildseries.wildtools.api.objects.Block;
+
 import xyz.wildseries.wildtools.api.objects.Selection;
 import xyz.wildseries.wildtools.api.objects.tools.CannonTool;
 import xyz.wildseries.wildtools.api.objects.tools.CraftingTool;
@@ -38,8 +37,6 @@ public interface ToolsManager {
     Tool getTool(ItemStack itemStack);
 
     List<Tool> getTools();
-
-    Block getBlock(Location location);
 
     Selection getSelection(Player player);
 
