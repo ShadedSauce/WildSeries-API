@@ -2,10 +2,11 @@ package xyz.wildseries.wildstacker.api.handlers;
 
 import org.bukkit.Location;
 import org.bukkit.block.CreatureSpawner;
-import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.LivingEntity;
+
+import xyz.wildseries.wildstacker.api.holograms.Hologram;
 import xyz.wildseries.wildstacker.api.objects.StackedEntity;
 import xyz.wildseries.wildstacker.api.objects.StackedItem;
 import xyz.wildseries.wildstacker.api.objects.StackedObject;
@@ -31,7 +32,9 @@ public interface SystemManager {
 
     void performSpawnerClear();
 
-    ArmorStand getHologram(StackedSpawner stackedSpawner);
+    Hologram getHologram(StackedSpawner stackedSpawner);
+
+    Hologram createHologram(StackedSpawner stackedSpawner);
 
     void removeHologram(StackedSpawner stackedSpawner);
 
@@ -50,9 +53,5 @@ public interface SystemManager {
     <T extends Entity> T spawnEntityWithoutStacking(Location location, Class<T> type);
 
     void performKillAll();
-
-    void saveDatabase();
-
-
 
 }
