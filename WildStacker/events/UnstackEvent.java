@@ -2,6 +2,7 @@ package xyz.wildseries.wildstacker.api.events;
 
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
+
 import xyz.wildseries.wildstacker.api.objects.StackedObject;
 
 public abstract class UnstackEvent extends Event implements Cancellable {

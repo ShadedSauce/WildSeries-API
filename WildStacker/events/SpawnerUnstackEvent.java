@@ -1,6 +1,7 @@
 package xyz.wildseries.wildstacker.api.events;
 
 import org.bukkit.event.HandlerList;
+
 import xyz.wildseries.wildstacker.api.objects.StackedSpawner;
 
 public class SpawnerUnstackEvent extends UnstackEvent {

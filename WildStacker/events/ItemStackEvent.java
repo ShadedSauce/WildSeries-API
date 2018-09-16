@@ -1,6 +1,7 @@
 package xyz.wildseries.wildstacker.api.events;
 
 import org.bukkit.event.HandlerList;
+
 import xyz.wildseries.wildstacker.api.objects.StackedItem;
 
 public class ItemStackEvent extends StackEvent {
