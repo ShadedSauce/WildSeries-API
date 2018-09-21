@@ -27,6 +27,9 @@ public interface StackedEntity extends StackedObject<LivingEntity> {
 
     StackedEntity spawnDuplicate(int amount);
 
+    @Deprecated
     List<ItemStack> getCustomDrops();
+
+    List<ItemStack> getDrops(int lootBonusLevel);
 
 }
