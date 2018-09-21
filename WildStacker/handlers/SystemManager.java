@@ -32,10 +32,13 @@ public interface SystemManager {
 
     void performSpawnerClear();
 
+    @Deprecated
     Hologram getHologram(StackedSpawner stackedSpawner);
 
+    @Deprecated
     Hologram createHologram(StackedSpawner stackedSpawner);
 
+    @Deprecated
     void removeHologram(StackedSpawner stackedSpawner);
 
     void performHologramClear();
