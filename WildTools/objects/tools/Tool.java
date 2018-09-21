@@ -5,6 +5,7 @@ import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+
 import xyz.wildseries.wildtools.api.objects.ToolMode;
 
 import java.util.List;
@@ -21,13 +22,15 @@ public interface Tool {
 
     void setAutoCollect(boolean autoCollect);
 
+    void setSilkTouch(boolean silkTouch);
+
     void setUnbreakable(boolean unbreakable);
 
     void setUsesLeft(int usesLeft);
 
     void setCooldown(long cooldown);
 
-    void setSilkTouch(boolean silkTouch);
+    void setKeepInventory(boolean keepInventory);
 
     void addEnchantment(Enchantment ench, int level);
 
@@ -60,6 +63,8 @@ public interface Tool {
     boolean isOnlySameType();
 
     long getCooldown();
+
+    boolean hasKeepInventory();
 
     Set<String> getBlacklistedMaterials();
 
