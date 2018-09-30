@@ -12,6 +12,12 @@ public interface StackedObject<T> {
 
     T tryStack();
 
+    boolean canStackInto(StackedObject stackedObject);
+
     boolean tryStackInto(StackedObject stackedObject);
+
+    boolean tryUnstackByOne();
+
+    boolean isSimilar(StackedObject stackedObject);
 
 }
