@@ -23,13 +23,12 @@ public interface StackedEntity extends StackedObject<LivingEntity> {
 
     void setCustomNameVisible(boolean visible);
 
-    void tryUnstackByOne();
+    LivingEntity trySpawnerStack(StackedSpawner stackedSpawner);
 
     StackedEntity spawnDuplicate(int amount);
 
-    @Deprecated
-    List<ItemStack> getCustomDrops();
-
     List<ItemStack> getDrops(int lootBonusLevel);
+
+    void setDrops(List<ItemStack> drops);
 
 }
