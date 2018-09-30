@@ -1,12 +1,13 @@
 package xyz.wildseries.wildstacker.api.handlers;
 
 import org.bukkit.Location;
+import org.bukkit.block.Block;
 import org.bukkit.block.CreatureSpawner;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.LivingEntity;
 
-import xyz.wildseries.wildstacker.api.holograms.Hologram;
+import xyz.wildseries.wildstacker.api.objects.StackedBlock;
 import xyz.wildseries.wildstacker.api.objects.StackedEntity;
 import xyz.wildseries.wildstacker.api.objects.StackedItem;
 import xyz.wildseries.wildstacker.api.objects.StackedObject;
@@ -28,18 +29,13 @@ public interface SystemManager {
 
     StackedSpawner getStackedSpawner(CreatureSpawner spawner);
 
+    StackedBlock getStackedBlock(Block block);
+
     List<StackedSpawner> getStackedSpawners();
 
     void performSpawnerClear();
 
-    @Deprecated
-    Hologram getHologram(StackedSpawner stackedSpawner);
-
-    @Deprecated
-    Hologram createHologram(StackedSpawner stackedSpawner);
-
-    @Deprecated
-    void removeHologram(StackedSpawner stackedSpawner);
+    void performBlockClear();
 
     void performHologramClear();
 
