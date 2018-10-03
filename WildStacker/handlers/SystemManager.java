@@ -7,7 +7,8 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.LivingEntity;
 
-import xyz.wildseries.wildstacker.api.objects.StackedBlock;
+import xyz.wildseries.wildstacker.api.objects.Barrel;
+import xyz.wildseries.wildstacker.api.objects.StackedBarrel;
 import xyz.wildseries.wildstacker.api.objects.StackedEntity;
 import xyz.wildseries.wildstacker.api.objects.StackedItem;
 import xyz.wildseries.wildstacker.api.objects.StackedObject;
@@ -29,13 +30,13 @@ public interface SystemManager {
 
     StackedSpawner getStackedSpawner(CreatureSpawner spawner);
 
-    StackedBlock getStackedBlock(Block block);
+    StackedBarrel getStackedBarrel(Barrel barrel);
 
     List<StackedSpawner> getStackedSpawners();
 
     void performSpawnerClear();
 
-    void performBlockClear();
+    void performBarrelClear();
 
     void performHologramClear();
 
@@ -48,6 +49,12 @@ public interface SystemManager {
     void updateLinkedEntity(LivingEntity oldEntity, LivingEntity newEntity);
 
     void performLinkedEntitiesClear();
+
+    Barrel getLinkedBarrel(Location location);
+
+    void setLinkedBarrel(Block block, Barrel barrel);
+
+    void removeLinkedBarrel(StackedBarrel stackedBarrel);
 
     <T extends Entity> T spawnEntityWithoutStacking(Location location, Class<T> type);
 

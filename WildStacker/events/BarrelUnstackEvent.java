@@ -1,19 +1,18 @@
 package xyz.wildseries.wildstacker.api.events;
 
 import org.bukkit.event.HandlerList;
-import xyz.wildseries.wildstacker.api.objects.StackedBlock;
-import xyz.wildseries.wildstacker.api.objects.StackedEntity;
+import xyz.wildseries.wildstacker.api.objects.StackedBarrel;
 
-public class BlockUnstackEvent extends UnstackEvent {
+public class BarrelUnstackEvent extends UnstackEvent {
 
     private static final HandlerList HANDLERS = new HandlerList();
 
-    public BlockUnstackEvent(StackedBlock block){
-        super(block);
+    public BarrelUnstackEvent(StackedBarrel barrel){
+        super(barrel);
     }
 
-    public StackedBlock getBlock() {
-        return (StackedBlock) object;
+    public StackedBarrel getBarrel() {
+        return (StackedBarrel) object;
     }
 
     @Override
