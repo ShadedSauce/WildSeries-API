@@ -1,6 +1,9 @@
 package xyz.wildseries.wildstacker.api;
 
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.block.Block;
 import org.bukkit.block.CreatureSpawner;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -95,6 +98,25 @@ public class WildStackerAPI {
      */
     public static int getBarrelAmount(Barrel barrel){
         return getStackedBarrel(barrel).getStackAmount();
+    }
+
+    /**
+     * Get a barrel for a block.
+     *
+     * @param block a block to check
+     * @return barrel object
+     */
+    public static Barrel getBarrel(Block block){
+        return instance.getSystemManager().getLinkedBarrel(block.getLocation());
+    }
+
+    /**
+     * Get the wildstacker object.
+     *
+     * @return wildstacker object
+     */
+    public static WildStacker getWildStacker(){
+        return instance;
     }
 
     /**
