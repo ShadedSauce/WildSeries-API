@@ -4,6 +4,7 @@ import org.bukkit.Location;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.inventory.ItemStack;
 
+@Deprecated
 public interface Barrel {
 
     ItemStack getItemStack(int amount);

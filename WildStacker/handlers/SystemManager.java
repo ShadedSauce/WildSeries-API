@@ -18,11 +18,7 @@ import java.util.List;
 
 public interface SystemManager {
 
-    int getStackAmount(StackedObject stackedObject);
-
-    void setStackAmount(StackedObject stackedObject, int stackAmount);
-
-    void removeStackAmount(StackedObject stackedObject);
+    void removeStackObject(StackedObject stackedObject);
 
     StackedEntity getStackedEntity(LivingEntity livingEntity);
 
@@ -30,31 +26,25 @@ public interface SystemManager {
 
     StackedSpawner getStackedSpawner(CreatureSpawner spawner);
 
-    StackedBarrel getStackedBarrel(Barrel barrel);
+    StackedBarrel getStackedBarrel(Block block);
+
+    Barrel getLinkedBarrel(Block block);
+
+    List<StackedEntity> getStackedEntities();
+
+    List<StackedItem> getStackedItems();
 
     List<StackedSpawner> getStackedSpawners();
 
-    void performSpawnerClear();
+    List<StackedBarrel> getStackedBarrels();
 
-    void performBarrelClear();
+    boolean isStackedSpawner(Block block);
 
-    void performHologramClear();
+    boolean isStackedBarrel(Block block);
 
-    LivingEntity getLinkedEntity(StackedSpawner stackedSpawner);
+    void performCacheClear();
 
-    void setLinkedEntity(StackedSpawner stackedSpawner, LivingEntity livingEntity);
-
-    void removeLinkedEntity(StackedSpawner stackedSpawner);
-
-    void updateLinkedEntity(LivingEntity oldEntity, LivingEntity newEntity);
-
-    void performLinkedEntitiesClear();
-
-    Barrel getLinkedBarrel(Location location);
-
-    void setLinkedBarrel(Block block, Barrel barrel);
-
-    void removeLinkedBarrel(StackedBarrel stackedBarrel);
+    void updateLinkedEntity(LivingEntity livingEntity, LivingEntity newLivingEntity);
 
     <T extends Entity> T spawnEntityWithoutStacking(Location location, Class<T> type);
 

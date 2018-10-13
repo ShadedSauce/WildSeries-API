@@ -1,7 +1,5 @@
 package xyz.wildseries.wildstacker.api;
 
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.block.CreatureSpawner;
@@ -83,11 +81,31 @@ public class WildStackerAPI {
     /**
      * Get a stacked-barrel object for a block.
      *
+     * @param block a block to check
+     * @return stacked-barrel object
+     */
+    public static StackedBarrel getStackedBarrel(Block block){
+        return instance.getSystemManager().getStackedBarrel(block);
+    }
+
+    /**
+     * Get a stacked-amount for a barrel.
+     *
+     * @param block a barrel to check
+     * @return stacked-amount
+     */
+    public static int getBarrelAmount(Block block){
+        return getStackedBarrel(block).getStackAmount();
+    }
+
+    /**
+     * Get a stacked-barrel object for a block.
+     *
      * @param barrel a barrel to check
      * @return stacked-barrel object
      */
     public static StackedBarrel getStackedBarrel(Barrel barrel){
-        return instance.getSystemManager().getStackedBarrel(barrel);
+        return instance.getSystemManager().getStackedBarrel(barrel.getLocation().getBlock());
     }
 
     /**
@@ -107,7 +125,7 @@ public class WildStackerAPI {
      * @return barrel object
      */
     public static Barrel getBarrel(Block block){
-        return instance.getSystemManager().getLinkedBarrel(block.getLocation());
+        return instance.getSystemManager().getLinkedBarrel(block);
     }
 
     /**
