@@ -7,12 +7,16 @@ public class BarrelUnstackEvent extends UnstackEvent {
 
     private static final HandlerList HANDLERS = new HandlerList();
 
-    public BarrelUnstackEvent(StackedBarrel barrel){
-        super(barrel);
+    public BarrelUnstackEvent(StackedBarrel barrel, int unstackAmount){
+        super(barrel, unstackAmount);
     }
 
     public StackedBarrel getBarrel() {
         return (StackedBarrel) object;
+    }
+
+    public int getAmount(){
+        return unstackAmount;
     }
 
     @Override

@@ -10,9 +10,11 @@ public abstract class UnstackEvent extends Event implements Cancellable {
     private boolean cancelled;
 
     protected final StackedObject object;
+    protected final int unstackAmount;
 
-    public UnstackEvent(StackedObject object){
+    public UnstackEvent(StackedObject object, int unstackAmount){
         this.object = object;
+        this.unstackAmount = unstackAmount;
         cancelled = false;
     }
 

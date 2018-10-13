@@ -8,12 +8,16 @@ public class SpawnerUnstackEvent extends UnstackEvent {
 
     private static final HandlerList HANDLERS = new HandlerList();
 
-    public SpawnerUnstackEvent(StackedSpawner spawner){
-        super(spawner);
+    public SpawnerUnstackEvent(StackedSpawner spawner, int unstackAmount){
+        super(spawner, unstackAmount);
     }
 
     public StackedSpawner getSpawner() {
         return (StackedSpawner) object;
+    }
+
+    public int getAmount(){
+        return unstackAmount;
     }
 
     @Override

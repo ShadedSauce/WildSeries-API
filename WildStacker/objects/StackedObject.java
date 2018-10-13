@@ -16,7 +16,7 @@ public interface StackedObject<T> {
 
     boolean tryStackInto(StackedObject stackedObject);
 
-    boolean tryUnstackByOne();
+    boolean tryUnstack(int amount);
 
     boolean isSimilar(StackedObject stackedObject);
 
