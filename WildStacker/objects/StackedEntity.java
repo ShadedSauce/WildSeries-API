@@ -31,4 +31,8 @@ public interface StackedEntity extends StackedObject<LivingEntity> {
 
     void setDrops(List<ItemStack> drops);
 
+    void ignoreDeathEvent();
+
+    boolean isIgnoreDeathEvent();
+
 }
