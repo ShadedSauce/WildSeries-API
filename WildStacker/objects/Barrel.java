@@ -5,6 +5,7 @@ import org.bukkit.entity.ArmorStand;
 import org.bukkit.inventory.ItemStack;
 
 @Deprecated
+@SuppressWarnings("unused")
 public interface Barrel {
 
     ItemStack getItemStack(int amount);

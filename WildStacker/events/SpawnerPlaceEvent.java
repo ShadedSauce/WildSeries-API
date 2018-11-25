@@ -4,6 +4,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
 import xyz.wildseries.wildstacker.api.objects.StackedSpawner;
 
+@SuppressWarnings("unused")
 public class SpawnerPlaceEvent extends PlaceEvent {
 
     private static final HandlerList HANDLERS = new HandlerList();

@@ -1,9 +1,9 @@
 package xyz.wildseries.wildstacker.api.events;
 
 import org.bukkit.event.HandlerList;
-
 import xyz.wildseries.wildstacker.api.objects.StackedEntity;
 
+@SuppressWarnings("unused")
 public class EntityStackEvent extends StackEvent {
 
     private static final HandlerList HANDLERS = new HandlerList();

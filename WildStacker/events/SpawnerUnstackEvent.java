@@ -1,9 +1,9 @@
 package xyz.wildseries.wildstacker.api.events;
 
 import org.bukkit.event.HandlerList;
-
 import xyz.wildseries.wildstacker.api.objects.StackedSpawner;
 
+@SuppressWarnings("unused")
 public class SpawnerUnstackEvent extends UnstackEvent {
 
     private static final HandlerList HANDLERS = new HandlerList();

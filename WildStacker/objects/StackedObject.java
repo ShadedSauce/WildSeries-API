@@ -1,5 +1,6 @@
 package xyz.wildseries.wildstacker.api.objects;
 
+@SuppressWarnings("BooleanMethodIsAlwaysInverted")
 public interface StackedObject<T> {
 
     int getStackAmount();

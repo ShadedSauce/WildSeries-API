@@ -7,6 +7,7 @@ import org.bukkit.inventory.ItemStack;
 import java.util.List;
 import java.util.UUID;
 
+@SuppressWarnings({"unused", "UnusedReturnValue"})
 public interface StackedEntity extends StackedObject<LivingEntity> {
 
     LivingEntity getLivingEntity();

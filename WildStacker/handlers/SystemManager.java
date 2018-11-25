@@ -6,7 +6,6 @@ import org.bukkit.block.CreatureSpawner;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.LivingEntity;
-
 import xyz.wildseries.wildstacker.api.objects.Barrel;
 import xyz.wildseries.wildstacker.api.objects.StackedBarrel;
 import xyz.wildseries.wildstacker.api.objects.StackedEntity;
@@ -16,6 +15,7 @@ import xyz.wildseries.wildstacker.api.objects.StackedSpawner;
 
 import java.util.List;
 
+@SuppressWarnings({"deprecation", "BooleanMethodIsAlwaysInverted"})
 public interface SystemManager {
 
     void removeStackObject(StackedObject stackedObject);

@@ -7,14 +7,14 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.LivingEntity;
-
 import xyz.wildseries.wildstacker.api.objects.Barrel;
 import xyz.wildseries.wildstacker.api.objects.StackedBarrel;
 import xyz.wildseries.wildstacker.api.objects.StackedEntity;
 import xyz.wildseries.wildstacker.api.objects.StackedItem;
 import xyz.wildseries.wildstacker.api.objects.StackedSpawner;
 
-public class WildStackerAPI {
+@SuppressWarnings({"WeakerAccess", "unused", "deprecation"})
+public final class WildStackerAPI {
 
     private static WildStacker instance;
 
