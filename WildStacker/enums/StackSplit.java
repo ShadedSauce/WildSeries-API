@@ -6,7 +6,8 @@ public enum StackSplit {
     NAME_TAG,
     MUSHROOM_SHEAR,
     SHEEP_SHEAR,
-    SHEEP_DYE;
+    SHEEP_DYE,
+    ENTITY_BREED;
 
     private boolean enabled;
 
