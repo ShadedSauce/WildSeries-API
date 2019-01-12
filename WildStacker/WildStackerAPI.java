@@ -7,13 +7,13 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.LivingEntity;
-import xyz.wildseries.wildstacker.api.objects.Barrel;
+import xyz.wildseries.wildstacker.api.loot.LootTable;
 import xyz.wildseries.wildstacker.api.objects.StackedBarrel;
 import xyz.wildseries.wildstacker.api.objects.StackedEntity;
 import xyz.wildseries.wildstacker.api.objects.StackedItem;
 import xyz.wildseries.wildstacker.api.objects.StackedSpawner;
 
-@SuppressWarnings({"WeakerAccess", "unused", "deprecation"})
+@SuppressWarnings({"WeakerAccess", "unused"})
 public final class WildStackerAPI {
 
     private static WildStacker instance;
@@ -99,36 +99,6 @@ public final class WildStackerAPI {
     }
 
     /**
-     * Get a stacked-barrel object for a block.
-     *
-     * @param barrel a barrel to check
-     * @return stacked-barrel object
-     */
-    public static StackedBarrel getStackedBarrel(Barrel barrel){
-        return instance.getSystemManager().getStackedBarrel(barrel.getLocation().getBlock());
-    }
-
-    /**
-     * Get a stacked-amount for a barrel.
-     *
-     * @param barrel a barrel to check
-     * @return stacked-amount
-     */
-    public static int getBarrelAmount(Barrel barrel){
-        return getStackedBarrel(barrel).getStackAmount();
-    }
-
-    /**
-     * Get a barrel for a block.
-     *
-     * @param block a block to check
-     * @return barrel object
-     */
-    public static Barrel getBarrel(Block block){
-        return instance.getSystemManager().getLinkedBarrel(block);
-    }
-
-    /**
      * Get the wildstacker object.
      *
      * @return wildstacker object
@@ -146,6 +116,16 @@ public final class WildStackerAPI {
      */
     public static Entity spawnEntityWithoutStacking(Location location, EntityType type){
         return instance.getSystemManager().spawnEntityWithoutStacking(location, type.getEntityClass());
+    }
+
+    /**
+     * Returns the loot loot of an entity.
+     *
+     * @param livingEntity An entity to check
+     * @return The loot loot of the provided entity
+     */
+    public static LootTable getLootTable(LivingEntity livingEntity){
+        return instance.getSystemManager().getLootTable(livingEntity);
     }
 
 }
