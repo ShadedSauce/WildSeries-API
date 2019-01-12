@@ -30,8 +30,6 @@ public interface StackedEntity extends StackedObject<LivingEntity> {
 
     List<ItemStack> getDrops(int lootBonusLevel);
 
-    void setDrops(List<ItemStack> drops);
-
     void ignoreDeathEvent();
 
     boolean isIgnoreDeathEvent();
