@@ -1,8 +1,8 @@
-package xyz.wildseries.wildstacker.api.events;
+package com.bgsoftware.wildstacker.api.events;
 
+import com.bgsoftware.wildstacker.api.objects.StackedBarrel;
 import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
-import xyz.wildseries.wildstacker.api.objects.StackedBarrel;
 
 @SuppressWarnings("unused")
 public class BarrelPlaceEvent extends PlaceEvent {

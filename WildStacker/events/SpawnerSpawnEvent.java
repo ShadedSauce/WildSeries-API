@@ -1,9 +1,9 @@
-package xyz.wildseries.wildstacker.api.events;
+package com.bgsoftware.wildstacker.api.events;
 
+import com.bgsoftware.wildstacker.api.objects.StackedEntity;
+import com.bgsoftware.wildstacker.api.objects.StackedSpawner;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
-import xyz.wildseries.wildstacker.api.objects.StackedEntity;
-import xyz.wildseries.wildstacker.api.objects.StackedSpawner;
 
 @SuppressWarnings("unused")
 public class SpawnerSpawnEvent extends Event {

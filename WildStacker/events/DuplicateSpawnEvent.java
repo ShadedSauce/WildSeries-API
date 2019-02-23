@@ -1,8 +1,8 @@
-package xyz.wildseries.wildstacker.api.events;
+package com.bgsoftware.wildstacker.api.events;
 
+import com.bgsoftware.wildstacker.api.objects.StackedEntity;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
-import xyz.wildseries.wildstacker.api.objects.StackedEntity;
 
 @SuppressWarnings("unused")
 public class DuplicateSpawnEvent extends Event {

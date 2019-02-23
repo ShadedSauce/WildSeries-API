@@ -1,6 +1,6 @@
-package xyz.wildseries.wildstacker.api;
+package com.bgsoftware.wildstacker.api;
 
-import xyz.wildseries.wildstacker.api.handlers.SystemManager;
+import com.bgsoftware.wildstacker.api.handlers.SystemManager;
 
 public interface WildStacker {
 

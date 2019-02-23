@@ -1,7 +1,7 @@
-package xyz.wildseries.wildstacker.api.events;
+package com.bgsoftware.wildstacker.api.events;
 
+import com.bgsoftware.wildstacker.api.objects.StackedItem;
 import org.bukkit.event.HandlerList;
-import xyz.wildseries.wildstacker.api.objects.StackedItem;
 
 @SuppressWarnings("unused")
 public class ItemStackEvent extends StackEvent {

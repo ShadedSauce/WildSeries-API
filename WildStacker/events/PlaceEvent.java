@@ -1,9 +1,9 @@
-package xyz.wildseries.wildstacker.api.events;
+package com.bgsoftware.wildstacker.api.events;
 
+import com.bgsoftware.wildstacker.api.objects.StackedObject;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.player.PlayerEvent;
-import xyz.wildseries.wildstacker.api.objects.StackedObject;
 
 @SuppressWarnings("WeakerAccess")
 public abstract class PlaceEvent extends PlayerEvent implements Cancellable {

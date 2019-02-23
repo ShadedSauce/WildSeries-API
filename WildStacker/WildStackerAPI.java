@@ -1,5 +1,10 @@
-package xyz.wildseries.wildstacker.api;
+package com.bgsoftware.wildstacker.api;
 
+import com.bgsoftware.wildstacker.api.loot.LootTable;
+import com.bgsoftware.wildstacker.api.objects.StackedBarrel;
+import com.bgsoftware.wildstacker.api.objects.StackedEntity;
+import com.bgsoftware.wildstacker.api.objects.StackedItem;
+import com.bgsoftware.wildstacker.api.objects.StackedSpawner;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.block.CreatureSpawner;
@@ -7,11 +12,6 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.LivingEntity;
-import xyz.wildseries.wildstacker.api.loot.LootTable;
-import xyz.wildseries.wildstacker.api.objects.StackedBarrel;
-import xyz.wildseries.wildstacker.api.objects.StackedEntity;
-import xyz.wildseries.wildstacker.api.objects.StackedItem;
-import xyz.wildseries.wildstacker.api.objects.StackedSpawner;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
 public final class WildStackerAPI {

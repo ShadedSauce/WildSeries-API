@@ -1,4 +1,4 @@
-package xyz.wildseries.wildstacker.api.enums;
+package com.bgsoftware.wildstacker.api.enums;
 
 public enum StackSplit {
 
