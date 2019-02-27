@@ -84,6 +84,13 @@ public interface StackedEntity extends StackedObject<LivingEntity> {
     List<ItemStack> getDrops(int lootBonusLevel, int stackAmount);
 
     /**
+     * Set a temporary loot-table for this entity.
+     * This loot table can be used one, and getDrops method will remove the temp loot-table.
+     * @param itemStacks The loot to set
+     */
+    void setTempLootTable(List<ItemStack> itemStacks);
+
+    /**
      * Ignore the death event of this entity.
      * Should be used if you want to override the behaviour of the entity.
      */
