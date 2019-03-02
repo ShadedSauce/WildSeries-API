@@ -1,6 +1,6 @@
-package xyz.wildseries.wildtools.api;
+package com.bgsoftware.wildtools.api;
 
-import xyz.wildseries.wildtools.api.handlers.ToolsManager;
+import com.bgsoftware.wildtools.api.handlers.ToolsManager;
 
 public interface WildTools {
 

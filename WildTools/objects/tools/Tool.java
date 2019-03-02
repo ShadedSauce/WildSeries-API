@@ -1,12 +1,13 @@
-package xyz.wildseries.wildtools.api.objects.tools;
+package com.bgsoftware.wildtools.api.objects.tools;
 
+import com.bgsoftware.wildtools.api.objects.ToolMode;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
-
-import xyz.wildseries.wildtools.api.objects.ToolMode;
 
 import java.util.List;
 import java.util.Set;
@@ -19,6 +20,8 @@ public interface Tool {
     void setLore(List<String> lore);
 
     void setOnlySameType(boolean onlySameType);
+
+    void setOnlyInsideClaim(boolean onlyInsideClaim);
 
     void setAutoCollect(boolean autoCollect);
 
@@ -62,6 +65,8 @@ public interface Tool {
 
     boolean isOnlySameType();
 
+    boolean isOnlyInsideClaim();
+
     long getCooldown();
 
     boolean hasKeepInventory();
@@ -90,11 +95,9 @@ public interface Tool {
 
     boolean isWhitelistedDrop(Material type, short data);
 
-    void useOnBlock(Player pl, Block bl);
-
     void reduceDurablility(Player pl);
 
-    boolean canBreakBlock(Block firstBlock, Block targetBlock);
+    boolean canBreakBlock(Block block, Material firstType, short data);
 
     List<ItemStack> filterDrops(List<ItemStack> drops);
 
@@ -105,5 +108,13 @@ public interface Tool {
     boolean canUse(UUID uuid);
 
     long getTimeLeft(UUID uuid);
+
+    boolean onBlockBreak(BlockBreakEvent e);
+
+    boolean onBlockInteract(PlayerInteractEvent e);
+
+    boolean onBlockHit(PlayerInteractEvent e);
+
+    boolean onAirInteract(PlayerInteractEvent e);
 
 }

@@ -1,19 +1,20 @@
-package xyz.wildseries.wildtools.api;
+package com.bgsoftware.wildtools.api;
 
+import com.bgsoftware.wildtools.api.objects.Selection;
+import com.bgsoftware.wildtools.api.objects.tools.CannonTool;
+import com.bgsoftware.wildtools.api.objects.tools.CraftingTool;
+import com.bgsoftware.wildtools.api.objects.tools.CuboidTool;
+import com.bgsoftware.wildtools.api.objects.tools.HarvesterTool;
+import com.bgsoftware.wildtools.api.objects.tools.LightningTool;
+import com.bgsoftware.wildtools.api.objects.tools.PillarTool;
+import com.bgsoftware.wildtools.api.objects.tools.Tool;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import xyz.wildseries.wildtools.api.objects.Selection;
-import xyz.wildseries.wildtools.api.objects.tools.CannonTool;
-import xyz.wildseries.wildtools.api.objects.tools.CraftingTool;
-import xyz.wildseries.wildtools.api.objects.tools.CuboidTool;
-import xyz.wildseries.wildtools.api.objects.tools.HarvesterTool;
-import xyz.wildseries.wildtools.api.objects.tools.LightningTool;
-import xyz.wildseries.wildtools.api.objects.tools.PillarTool;
-import xyz.wildseries.wildtools.api.objects.tools.SellTool;
-import xyz.wildseries.wildtools.api.objects.tools.Tool;
+import com.bgsoftware.wildtools.api.objects.tools.SellTool;
 
-public class WildToolsAPI {
+@SuppressWarnings("unused")
+public final class WildToolsAPI {
 
     private static WildTools instance;
 
@@ -115,6 +116,16 @@ public class WildToolsAPI {
      */
     public static Selection getCannonWandSelection(Player player){
         return instance.getToolsManager().getSelection(player);
+    }
+
+
+    /**
+     * Get the wildtools object
+     *
+     * @return wildtools object
+     */
+    public static WildTools getWildTools(){
+        return instance;
     }
 
     /**

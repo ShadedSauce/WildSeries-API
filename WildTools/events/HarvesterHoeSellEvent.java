@@ -1,11 +1,12 @@
-package xyz.wildseries.wildtools.api.events;
+package com.bgsoftware.wildtools.api.events;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.player.PlayerEvent;
 
-public class HarvesterHoeSellEvent extends PlayerEvent implements Cancellable {
+@SuppressWarnings("unused")
+public final class HarvesterHoeSellEvent extends PlayerEvent implements Cancellable {
 
     private static final HandlerList HANDLERS = new HandlerList();
 
