@@ -2,6 +2,7 @@ package com.bgsoftware.wildstacker.api.objects;
 
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.List;
@@ -91,6 +92,21 @@ public interface StackedEntity extends StackedObject<LivingEntity> {
     void setTempLootTable(List<ItemStack> itemStacks);
 
     /**
+     * Get the exp of this entity.
+     * @param defaultExp the default exp to return if not found
+     * @return The amount of exp to drop.
+     */
+    int getExp(int defaultExp);
+
+    /**
+     * Get the exp of this entity with a stack size.
+     * @param stackAmount the stack size
+     * @param defaultExp the default exp to return if not found
+     * @return The amount of exp to drop.
+     */
+    int getExp(int stackAmount, int defaultExp);
+
+    /**
      * Ignore the death event of this entity.
      * Should be used if you want to override the behaviour of the entity.
      */
@@ -101,5 +117,17 @@ public interface StackedEntity extends StackedObject<LivingEntity> {
      * @return True if death event is ignored, otherwise false
      */
     boolean isIgnoreDeathEvent();
+
+    /**
+     * Returns the spawn reason of this entity
+     * @return spawn reason
+     */
+    CreatureSpawnEvent.SpawnReason getSpawnReason();
+
+    /**
+     * Checks if the entity is nerfed or not.
+     * @return True if entity is nerfed, otherwise false.
+     */
+    boolean isNerfed();
 
 }
